@@ -15,13 +15,13 @@ public class MinQuadradosResp implements Serializable {
 	private double somaY2;
 
 	public MinQuadradosResp() {
-	    super();
-	    init();
+		super();
+		init();
 	}
 
 	public void init() {
-	    a = b = r = 0d;
-	    somaX = somaY = somaXY = somaX2 = somaY2 = 0d;
+		a = b = r = 0d;
+		somaX = somaY = somaXY = somaX2 = somaY2 = 0d;
 	}
 
 	public double getA() {
@@ -91,8 +91,7 @@ public class MinQuadradosResp implements Serializable {
 	@Override
 	public String toString() {
 		String sep = "; ";
-		StringBuilder sb = new StringBuilder(super.toString());
-		sb.append("\n");
+		StringBuilder sb = new StringBuilder();
 		sb.append("somaX: ").append(somaX).append(sep);
 		sb.append("somaY: ").append(somaY).append(sep);
 		sb.append("somaXY: ").append(somaXY).append(sep);

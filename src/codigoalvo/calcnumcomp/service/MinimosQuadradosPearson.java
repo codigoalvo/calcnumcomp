@@ -1,6 +1,5 @@
 package codigoalvo.calcnumcomp.service;
 
-import java.math.BigDecimal;
 import java.util.*;
 import java.util.Map.Entry;
 import codigoalvo.calcnumcomp.common.MinQuadradosResp;
@@ -9,7 +8,7 @@ public class MinimosQuadradosPearson {
 
 	public static MinQuadradosResp calculaMinQuadradoP(Map<Double, Double> xyMap) {
 		MinQuadradosResp resp = new MinQuadradosResp();
-		double somaX = 0; 
+		double somaX = 0;
 		double somaY = 0;
 		double somaXY = 0;
 		double somaX2 = 0;
@@ -35,7 +34,7 @@ public class MinimosQuadradosPearson {
 
 		resp.setA((somaX * somaXY - somaX2 * somaY) / (somaX * somaX - m * somaX2));
 		resp.setB((somaX * somaY - m * somaXY) / (somaX * somaX - m * somaX2));
-		resp.setR((m * somaXY - somaX * somaY ) / Math.sqrt((m * somaX2 - (somaX) * (somaX)) * (m * somaY2 - (somaY) * (somaY))));
+		resp.setR((m * somaXY - somaX * somaY) / Math.sqrt((m * somaX2 - (somaX) * (somaX)) * (m * somaY2 - (somaY) * (somaY))));
 
 		return resp;
 	}
